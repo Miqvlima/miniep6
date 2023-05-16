@@ -1,0 +1,18 @@
+Nome: Miqueias Lima
+NUSP: 11796340
+
+MiniEP6 - Usando Docker
+
+Lista de Comandos para montar a imagem e rodá-la:
+
+$ sudo docker image build . -t  my-caddy-server
+$ sudo docker container run -p 80:1028 --name my-caddy-server -d my-caddy-server
+
+Comando para incluir mudanças no site e atualizar o container:
+
+$ sudo docker cp index.html  my-caddy-server:/usr/src/pages/index.html
+
+Para parar o container e matá-lo:
+
+$ sudo docker stop my-caddy-server
+$ sudo docker rm my-caddy-server
